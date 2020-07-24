@@ -16,7 +16,7 @@ body {
 .table {
   max-width: 645px;
   background: white;
-  margin: auto auto;
+  margin: 0 auto;
   margin-top: 121px;
 }
 
@@ -92,7 +92,7 @@ h1 {
   height: 40px;
   border-radius: 3px;
   background: #fad312;
-  border: 1px solid #fad312;
+  border: none;
   font-family: MicrosoftJhengHei;
   font-size: 15px;
   cursor: pointer;
@@ -105,18 +105,11 @@ h1 {
   padding-bottom: 35px;
 }
 
-.table__bottom {
-  width: 100%;
-  height: 60px;
-  background: black;
-}
-
 .footer__info {
-  font-family: MicrosoftJhengHei;
-  font-size: 13px;
+  background: #000000;
   color: #999999;
   text-align: center;
-  padding-top: 26px;
+  padding: 26px 12px;
 }
 
 @media(max-width: 320px) {
