@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgba(0,0,0,0.3)
+}
+
+.table__top {
+  height: 8px;
+  background: #fad312;
+  
+}
+
+.table {
+  max-width: 645px;
+  background: white;
+  margin: auto auto;
+  margin-top: 121px;
+}
+
+.wrap {
+  margin: 54px 42px;
+}
+
+h1 {
+  font-family: MicrosoftJhengHei;
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 35px;
+}
+
+.wrap .act{
+  height: 13px;
+  font-family: MicrosoftJhengHei;
+  font-size: 14px;
+  color: #000000;
+  line-height: 1.5em;
+  margin-bottom: 46px;
+}
+
+.remind {
+  font-family: MicrosoftJhengHei;
+  font-size: 16px;
+  color: #e74149;
+}
+
+.question {
+  margin-bottom: 20px;
+}
+
+.question__item {
+  margin-bottom: 49px;
+}
+
+.question span {
+  color: #e74149;
+}
+
+.feedback {
+  border: solid 1px #d0d0d0;
+  width: 287px;
+  height: 23px;
+  color: #afafaf;
+}
+
+.btn_1,.btn_2 {
+  width: 12px;
+  height: 12px;
+  border: solid 1px #d0d0d0;
+  background-color: #bababa;
+}
+
+.btn_2 {
+  margin-top: 23px;
+}
+
+.btn__item {
+  font-family: MicrosoftJhengHei;
+  font-size: 14px;
+}
+
+.question__desc {
+  margin-top: 10px;
+  font-family: MicrosoftJhengHei;
+  font-size: 14px;
+}
+
+.btn__submit {
+  width: 92px;
+  height: 40px;
+  border-radius: 3px;
+  background: #fad312;
+  border: 1px solid #fad312;
+  font-family: MicrosoftJhengHei;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.warn {
+  font-family: MicrosoftJhengHei;
+  font-size: 14px;
+  padding-top: 21px;
+  padding-bottom: 35px;
+}
+
+.table__bottom {
+  width: 100%;
+  height: 60px;
+  background: black;
+}
+
+.footer__info {
+  font-family: MicrosoftJhengHei;
+  font-size: 13px;
+  color: #999999;
+  text-align: center;
+  padding-top: 26px;
+}
+
+@media(max-width: 320px) {
+  h1 {
+    font-size: 30px;
+  }
+
+  .feedback {
+    width: 200px;
+  }
+
+  .footer__info {
+    padding: 20px;
+  }
+}
