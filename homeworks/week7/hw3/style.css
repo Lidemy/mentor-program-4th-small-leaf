@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.wrap {
+  max-width: 500px;
+  min-height: 500px;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 100px auto;
+}
+
+.img {
+  position: relative;
+  background: url('https://i.pinimg.com/originals/50/e8/1b/50e81b57409bbb13fc0749c3b2465fa5.gif') no-repeat  center bottom;
+  background-size: cover;
+  height: 300px;
+  border-top-left-radius:10px ;
+  border-top-right-radius:10px ;
+}
+
+.img::after {
+  content: '';
+  position: absolute;
+  background: rgba(0, 0, 0, 0.4);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 10px;
+}
+
+.img h1 {
+  position: relative;
+  display: inline-block;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  letter-spacing: 7px;
+  font-size: 50px;
+}
+
+.todo-list {
+  padding: 20px;
+  min-height: 300px;
+}
+
+.todo-input-block {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.todo-input {
+ 
+  outline: none;
+  border: none;
+  border-bottom: 1px solid black;
+  font-size: 20px;
+}
+
+.btn-add {
+  display: inline;
+}
+
+.todo-input-block {
+  text-align: center;
+}
+
+.todo {
+  display: flex;
+  margin: 12px 0; 
+  padding: 5px 10px;
+}
+
+.todo:hover {
+  box-shadow: 0px 0px 13px 3px rgba(0,0,0,0.1);
+  background: rgba(0, 0, 0, 0.2);
+}
+
+button {
+  height: 35px;
+  width: 50px;
+  font-size: 20px;
+}
+
+.todo .todo__check,
+.todo .todo__title {
+  margin-top: 5px;
+}
+
+.todo__check {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px; 
+}
+
+label {
+  flex: 1;
+  font-size: 20px;
+}
+
+.todo.done .todo__title {
+  text-decoration: line-through;
+}
+
+.footer {
+  position: relative;;
+  background:url('https://i.pinimg.com/originals/50/e8/1b/50e81b57409bbb13fc0749c3b2465fa5.gif') no-repeat  bottom;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  height: 50px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.footer::after {
+  content: '';
+  position: absolute;
+  background: rgba(0, 0, 0, 0.4);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.footer_info {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  line-height: 50px;
+  color: white;
+}
+
+.footer__img {
+  vertical-align: middle;
+  position: relative;
+  margin-left: 15px;
+  height: 30px;
+  width: 30px;
+}
