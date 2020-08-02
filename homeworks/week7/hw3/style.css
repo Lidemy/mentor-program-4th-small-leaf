@@ -86,17 +86,21 @@ button {
   height: 35px;
   width: 50px;
   font-size: 20px;
+  margin-left: 10px;
 }
 
-.todo .todo__check,
-.todo .todo__title {
-  margin-top: 5px;
-}
-
-.todo__check {
+.todo .todo__check {
+  position: relative;
+  top: 6px;
   width: 20px;
   height: 20px;
   margin-right: 8px; 
+}
+
+.todo .todo__title {
+  position: relative;
+  top: 3px;
+  word-break: break-all;
 }
 
 label {
