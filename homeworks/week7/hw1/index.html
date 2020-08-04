@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>新拖延運動報名表單</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+  <form class="form">
+    <div class="form__top">
+    </div>
+    <div class="wrap">
+      <h1>新拖延運動報名表單</h1>
+      <div class="act">
+        活動日期：2020/12/10 ~ 2020/12/11
+        <br>
+        活動地點：台北市大安區新生南路二段1號
+      </div>
+      <div class="remind">*必填</div>
+    </div>
+
+    <div class="wrap">
+      <div class="question__item required hide-error">
+        <div class="question">暱稱<span> *</span></div>
+        <div>
+          <input name="nickname" class="feedback" type="text" placeholder="您的回答">
+        </div>
+        <div class="error-info">請輸入暱稱</div>
+      </div>
+      <div class="question__item required hide-error">
+        <div class="question">電子郵件<span> *</span></div>
+        <div>
+          <input name="email" class="feedback" type="text" placeholder="您的電子郵件">
+        </div>
+        <div class="error-info">請輸入電子郵件</div>
+      </div>
+      <div class="question__item required hide-error">
+        <div class="question">手機號碼<span> *</span></div>
+        <div>
+          <input name="phone" class="feedback" type="text" placeholder="您的手機號碼">
+        </div>
+        <div class="error-info">請輸入手機號碼</div>
+      </div>
+      <div class="question__item required hide-error">
+        <div class="question">報名類型<span> *</span></div>
+        <label>
+          <div>
+            <input class="btn_1" type="radio" name="option" value="1"><span class="btn__item"> 躺在床上用想像力實作</span>
+          </div>
+        </label>
+        <label>
+          <div>
+            <input class="btn_2" type="radio" name="option" value="2"><span class="btn__item"> 趴在地上滑手機找現成的</span>
+          </div>
+        </label>
+        <div class="error-info">請輸入報名類型</div>
+      </div>
+      <div class="question__item required hide-error">
+        <div class="question">怎麼知道這個活動的？<span> *</span></div>
+        <div>
+          <input name="referal" class="feedback" type="text" placeholder="您的回答">
+        </div>
+        <div class="error-info">請輸入資料</div>
+      </div>
+      <div class="question__item">
+        <div class="question">其他<br>
+          <p class="question__desc">
+            對活動的一些建議
+          </p>
+        </div>
+        <div>
+          <input name="" class="feedback" type="text" placeholder="您的回答">
+        </div>
+      </div>
+
+      <div>
+        <input name="" type="submit" class="btn__submit">
+      </div>
+      <div class="warn">
+        請勿透過表單送出您的密碼。
+      </div>
+    </div>
+  </form>
+
+  <footer>
+    <div class="footer__info">
+      © 2020 © Copyright. All rights Reserved.
+    </div>
+  </footer>
+  <script src="./index.js"></script>
+</body>
+
+</html>
