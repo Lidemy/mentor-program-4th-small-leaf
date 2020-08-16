@@ -4,7 +4,7 @@
   function getUserFromUsername($username) {
     global $conn;
     $sql = sprintf(
-      'select * from users where username="%s"',
+      'select * from small_leaf_users where username="%s"',
       $username
     );
     $result = $conn->query($sql);
