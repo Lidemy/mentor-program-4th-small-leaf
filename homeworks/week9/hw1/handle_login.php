@@ -13,7 +13,7 @@
   $username = $_POST['username'];
   $password = $_POST['password'];
 
-  $sql = 'select * from users where username=?';
+  $sql = 'select * from small_leaf_users where username=?';
   $stmt = $conn->prepare($sql);
   $stmt->bind_param('s', $username);
   $result = $stmt->execute();
