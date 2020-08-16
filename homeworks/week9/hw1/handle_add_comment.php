@@ -16,7 +16,7 @@
 
   $content = $_POST['content'];
 
-  $sql = 'insert into comments(nickname, content) values(?, ?)';
+  $sql = 'insert into small_leaf_comments(nickname, content) values(?, ?)';
   $stmt = $conn->prepare($sql);
   $stmt->bind_param('ss', $nickname, $content);
   $result = $stmt->execute();
