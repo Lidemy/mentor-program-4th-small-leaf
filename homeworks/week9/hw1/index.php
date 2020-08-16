@@ -15,7 +15,7 @@
     $nickname = $user['nickname'];
   }
 
-  $stmt = $conn->prepare('select * from comments order by id desc');
+  $stmt = $conn->prepare('select * from small_leaf_comments order by id desc');
   $result = $stmt->execute();
   if(!$result) {
     die('Error' . $conn->error);
