@@ -15,7 +15,7 @@
   $username = $_POST['username'];
   $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-  $sql = 'insert into users(nickname, username, password) values(?, ?, ?)';
+  $sql = 'insert into small_leaf_users(nickname, username, password) values(?, ?, ?)';
   $stmt = $conn->prepare($sql);
   $stmt->bind_param('sss', $nickname, $username, $password);
   $result = $stmt->execute();
