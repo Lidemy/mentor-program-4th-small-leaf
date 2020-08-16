@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #CBCBC1;
+}
+
+.warning {
+  background: #575849;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+
+.error {
+  position: absolute;
+  margin-top: 15px;
+  color: red;
+}
+
+h3 {
+  color: #74a444;
+}
+
+.board {
+  background: white;
+  max-width: 600px;
+  width: 100%;
+  margin: 20px auto;
+  box-shadow: 1px 1px 3px #e8e8e8;
+  border-radius: 5px;
+  padding: 10px 30px;
+}
+
+.board__title {
+  margin: 20px 0;
+}
+
+.board__top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.board__btn-block {
+  display: flex;
+  align-items: center;
+}
+
+.board_new-comment-form  textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cbcbc1;
+}
+
+.board__nickname {
+  margin: 10px 0;
+}
+
+.board__nickname input {
+  border: 1px solid #cbcbc1;
+  padding: 5px;
+}
+
+.board__submit-btn {
+  position: relative;
+  padding: 10px 30px;
+  margin-top: 10px;
+  right: -445px;
+  border: 1px solid #cbcbc1;
+  border-radius: 5px;
+  height: 40px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  color: #575849;
+  background: white;
+}
+
+.board__submit-btn:hover {
+  background: #636364;
+  color: white;
+}
+
+hr {
+  border: 0.5px solid #cbcbc1;
+  margin: 20px auto;
+}
+
+.card {
+  margin: 20px 0;
+  min-height: 70px;
+  display: flex;
+}
+
+.card__avatar {
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  border-radius: 50%;
+  background: #96af68;
+}
+
+.card__body {
+  margin-left: 10px;
+}
+
+.card__author {
+  color: #6c7c4f;
+  font-weight: bold;
+  word-break: break-word;
+}
+
+.card__time {
+  color: #87876f;
+}
+
+.card__content {
+  white-space: pre-line;
+  word-break: break-word;
+}
+
+.board__btn {
+  padding: 10px 30px;
+  border: 1px solid #cbcbc1;
+  border-radius: 5px;
+  height: 40px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  color: #575849;
+  background: white;
+  display: inline-block;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.board__btn:hover {
+  background: #636364;
+  color: white;
+}
+
+h3 {
+  margin: 20px 0;
+}
