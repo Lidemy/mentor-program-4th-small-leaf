@@ -56,6 +56,7 @@ CSRF 的攻擊原理是利用瀏覽器自動帶上使用者 cookie 的機制，�
   * `Double Submit Cookie`：同樣由 server 產生隨機的 token 值，一樣在表單放 csrftoken，但不存在 session 中，而是存在 client 端的 cookie 裡，由於瀏覽器的限制，攻擊者沒辦法讀寫目標網站的 cookie，所以 request 的 csrftoken 會跟 cookie 內的不一樣，所以他發上來的 request 的 cookie 裡面就沒有 csrftoken，就會被擋下來
   * `Client 端生成的 Double Submit Cookie`：這個方法則是由 client 端產生隨機的 token 值，並存放在 form 與 cookie 中，因為 token 本身的目的其實不包含任何資訊，只是為了不讓攻擊者猜出而已，所以由 client 還是由 server 來生成都是一樣的，只要確保不被猜出來即可
   * `browser 本身的防禦 - SameSite cookie `：原理就是幫 Cookie 再加上一層驗證，不允許跨站請求，除了我自己的網域，其他任何來自不同網域的 request 都不會帶上 cookie
+  
   只要在設置 cookie 時加上 SameSite ，如下
   ```
   Set-Cookie: session_id=<id>; SameSite
