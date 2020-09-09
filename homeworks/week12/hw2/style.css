@@ -1,0 +1,39 @@
+.btn-delete {
+  opacity: 0;
+}
+.todo:hover .btn-delete {
+  opacity: 1;
+}
+
+input[type=checkbox]:checked ~ label {
+  text-decoration: line-through;
+  color: rgba(255,255,255,0.5);
+}
+
+.todo__content-wrapper {
+  flex: 1;
+}
+
+.todo__content {
+  display: block;
+  word-break: break-all;
+}
+
+.info, .options, .todo {
+  display: flex;
+}
+
+.options div, .clear-all {
+  cursor: pointer;
+  border-radius: 6px;
+  padding: 4px;
+  border: 2px solid transparent;
+}
+
+.options div.active, .clear-all.active {
+  border-color: rgba(255, 0, 0, 0.3);
+}
+
+.options div:hover, .clear-all:hover {
+  border-color: rgba(255, 0, 0, 0.5);
+}
