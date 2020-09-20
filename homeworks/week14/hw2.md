@@ -14,7 +14,7 @@
 
 跟著[影片](https://www.youtube.com/watch?v=kOHiDHb38MU)到最後應該就可以進入 ubuntu 了，之後可以參考[這篇文章](https://github.com/Lidemy/mentor-program-2nd-yuchun33/issues/15)，
 我為了省略一些不必要的麻煩，個人在**設定 phpmyadmin**
-的第七點，密碼強度的部分我是選 0，當然也可以選擇 1 或 2，但就是檢查的比較嚴格，不過這部分也不用擔心，還是能夠透過指令來更改密碼強度和密碼長度的
+的第七點，密碼強度的部分我是選 0，當然也可以選擇 1 或 2，但就是檢查的比較嚴格，不過這部分也不用擔心，還是能夠透過[指令](https://blog.vvtitan.com/2018/04/mysql%E6%9B%B4%E6%94%B9%E5%AF%86%E7%A2%BC%E9%A1%AF%E7%A4%BA%E3%80%8Cerror-1819-hy000-password-satisfy-current-policy-requirements%E3%80%8D%E9%8C%AF%E8%AA%A4%E8%A8%8A%E6%81%AF%E7%9A%84%E8%99%95/)來更改密碼強度和密碼長度的
 
 * step3 設定 DNS
 
