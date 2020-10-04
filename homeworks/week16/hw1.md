@@ -33,3 +33,5 @@ console.log(5)
 2
 4
 ```
+## 小筆記
+「非同步的 callback function 會先被放到 callback queue，並且等到 call stack 為空時候才被 event loop 丟進去 call stack」
