@@ -90,6 +90,13 @@ global VO {
 18. fn EC 執行結束，回到 global EC 執行其餘程式碼
 19. 執行`console.log(a)` 此時 global AO 中的 a = 1，所以輸出結果為 `{1}`
 20. 執行`a = 10`，查看 global VO 有沒有 a，有，為 a 賦值為 10
+```js
+global VO {
+  fn: func,
+  a: 10,
+  b: 100
+}
+```
 21. 執行`console.log(a)` 此時 global AO 中的 a = 10，所以輸出結果為 `{10}`
 22. 執行`console.log(b)` 此時 global AO 中的 b = 100，所以輸出結果為 `{100}`
  
