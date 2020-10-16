@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('temp/header') %>
+  <title>抽個大獎</title>
+</head>
+<body>
+  <%- include ('temp/navbar') %>
+  <section class="lottery__block">
+    <div class="container">
+      <div class="lottery__title">
+        2020 夏日輕盈特賞！ 抽獎活動辦法
+      </div>
+      <div class="lottey__item"> 
+        <h2>活動期間：</h2>
+        <p>2020/06/01~2020/07/01</p>
+      </div>
+      <div class="lottey__item"> 
+        <h2>活動說明：</h2>
+        <p>今天老闆佛心來著決定給大家發獎勵，有看有機會，沒看只能幫QQ！只要在店內消費滿1000000元即有機會獲得 - 頭獎日本東京來回雙人遊！</p>
+      </div>
+      <div class="lottey__item"> 
+        <h2>獎  品：</h2>
+          <p>
+          <% for(let prize of prizes) { %>
+            <% if(prize.name === '沒中獎') continue %>
+            ❤ <%= `${prize.name}：${prize.award}` %> <br>
+          <% } %>
+          </p>       
+      </div>
+      <button class="lottery__btn">
+        我要抽獎
+      </button>
+    </div>
+  </section>
+
+  <section class="lottery__result hide">
+    <div  class="lottery__result__prize">
+      <h2> 恭喜你中頭獎了！日本東京來回雙人遊！</h2>
+      <p></p>
+      <button class="lottery__result__btn" onclick="javascript:window.location.reload()">
+        我要抽獎
+      </button>
+    </div>
+  </section>
+  <%- include('temp/footer') %>
+  <script src="/index.js"></script>
+</body>
+</html>
