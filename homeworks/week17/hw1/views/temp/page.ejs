@@ -1,0 +1,28 @@
+<div class="page-info">
+  <span>共 <%= $count %> 筆 - 頁數：</span>
+  <span><%= $page %> / <%= $total_page %></span>
+  <div class="paginator">
+  <%
+    if(empty($category_id)) {
+      if($page != 1) { 
+    %>
+      <a href="/index/1">首頁</a>
+      <a href="/index/<%= $page - 1 %>">上一頁</a>
+    <% } %>
+    <% if($page != $total_page) { %>
+      <a href="index/<%= $page + 1 %>">下一頁</a>
+      <a href="index/<%= $total_page %>">末頁</a>
+    <% }} %>
+    <%
+    if(!empty($category_id)) {
+      if($page != 1) { 
+    %>
+      <a href="category/<%= $category_id %>&page=1">首頁</a>
+      <a href="category/<%= $category_id %>&<%= $page - 1 %>">上一頁</a>
+    <% } %>
+    <% if($page != $total_page) { %>
+      <a href="category/?<%= $category_id %>&<%= $page + 1 %>">下一頁</a>
+      <a href="category/?<%= $category_id %>&<%= $total_page %>">末頁</a>
+    <% }} %>
+  </div>
+ </div>
