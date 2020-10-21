@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('temp/header') %>
+  <title>抽個大獎</title>
+</head>
+<body>
+  <%- include('temp/admin_navbar') %>
+  <div class="container-wrapper">
+    <div class="prize-container">
+      <div class="edit-prize">
+        <form action="/edit" method="POST">
+          <div class="edit-prize__name">
+            <h3>編輯獎項：</h3>
+          </div>
+          <div class="edit-prize__input-wrapper">
+            <h3>獎項</h3>
+            <input class="edit-prize__input" name="name" value="<%= prize.name %>"/>
+          </div>
+          <div class="edit-prize__input-wrapper">
+            <h3>獎品</h3>
+            <input class="edit-prize__input" name="award" value="<%= prize.award %>"/>
+          </div>
+          <div class="edit-prize__input-wrapper">
+            <h3>圖片網址</h3>
+            <input class="edit-prize__input" name="url" value="<%= prize.url %>"/>
+          </div>
+          <div class="edit-prize__input-wrapper">
+            <h3>權重數</h3>
+            <input class="edit-prize__input" name="weight" type="number" placeholder="權重不可重複" value="<%= prize.weight %>"/>
+          </div>
+          <div class="edit-prize__btn-wrapper">
+            <% if(errMessage && errMessage.length > 0) { %>
+              <span class="error">
+                <%= errMessage %>
+              </span>
+            <% } %>
+              <input class="edit-prize__btn" type="submit" value="送出"/>
+          </div>
+          <input type="hidden" name="id" value="<%= prize.id %>"/>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
