@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('temp/header') %>
+  <title>部落格</title>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="wrapper navbar__wrapper">
+      <div class="navbar__site-name">
+        <a href='/'>Who's Blog</a>
+      </div>
+      <ul class="navbar__list">
+        <div>
+          <li><a href="/post_list">文章列表</a></li>
+          <li><a href="/category_list">分類專區</a></li>
+          <li><a href="/about_me">關於我</a></li>
+        </div>
+        <div>
+        <% if(username) { %>
+            <li><a href="/admin">管理文章</a></li>
+            <li><a href="/admin_category">管理分類</a></li>
+            <li><a href="/logout">登出</a></li>
+          <% } else { %>
+            <li><a href="/login">登入</a></li>
+          <% } %>
+        </div>
+      </ul>
+    </div>
+  </nav>
+  <section class="banner">
+    <div class="banner__wrapper">
+      <h1>存放技術之地</h1>
+      <div>Welcome to my blog</div>
+    </div>
+  </section>
+  <div class="container-wrapper">
+    <div class="container">
+      <div class="about_me__wrap">
+        <div class="about_me__block">
+          <div class="about_me">
+            <img src="/LOGO0.png">
+            <div class="about_me__name">
+              <h2>small_leaf</h2>
+            </div>
+            <div class="about_me__intro">
+            <p>
+              明知此花終將謝，然亦迷戀難自拔
+            </p>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>Copyright © 2020 Who's Blog All Rights Reserved.</footer>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('temp/header')%>
+  <title>抽個大獎</title>
+</head>
+<body>
+  <%- include('temp/admin_navbar') %>
+  <div class="container-wrapper">
+    <div class="prize-container">
+      <main class="admin__board">
+        <table>
+          <tr>
+            <th>id</th>
+            <th>獎項</th>
+            <th>獎品</th>
+            <th>圖片網址</th>
+            <th>權重</th>
+            <th>setting</th>
+          </tr>
+          <%
+          prizes.forEach(function(prize) {
+          %>
+          <tr>
+            <td><%= prize.id %></td>
+            <td><%= prize.name %></td>
+            <td><%= prize.award %></td>
+            <td><%= prize.url %></td>
+            <td><%= prize.weight %></td>
+            <td>
+              <a class="admin-prize__btn" href="/edit/<%= prize.id %>">
+                編輯
+              </a>
+              <form action="/delete" method="POST">
+                <input type="hidden" name="id" value="<%= prize.id %>"></input>
+                <input type="submit" class="admin-prize__btn" value="刪除">
+                </input>
+              </form>
+            </td>
+          </tr>
+          <% }) %>
+        </table>
+        <div class="add">
+          <a class="add__btn" href="/add_prize">新增獎項 </a>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
