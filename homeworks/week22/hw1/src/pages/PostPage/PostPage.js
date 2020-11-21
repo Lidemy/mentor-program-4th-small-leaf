@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { getPost } from "../../WebAPI";
 import { useParams } from "react-router-dom";
+import Spinner from "../../components/Spinner";
 
 const PostContainer = styled.div`
   width: 80%;
@@ -31,7 +32,7 @@ const PostBody = styled.div`
 `;
 
 const PostPage = () => {
-  const [post, setPost] = useState({});
+  const [post, setPost] = useState("");
   const { id } = useParams();
 
   useEffect(() => {
@@ -39,13 +40,19 @@ const PostPage = () => {
   }, [id]);
 
   return (
-    <PostContainer>
-      <PostHeader>
-        <PostTitle>{post.title}</PostTitle>
-        <PostDate>{new Date(post.createdAt).toLocaleString()}</PostDate>
-      </PostHeader>
-      <PostBody>{post.body}</PostBody>
-    </PostContainer>
+    <>
+      {post ? (
+        <PostContainer>
+          <PostHeader>
+            <PostTitle>{post.title}</PostTitle>
+            <PostDate>{new Date(post.createdAt).toLocaleString()}</PostDate>
+          </PostHeader>
+          <PostBody>{post.body}</PostBody>
+        </PostContainer>
+      ) : (
+        <Spinner />
+      )}
+    </>
   );
 };
 
