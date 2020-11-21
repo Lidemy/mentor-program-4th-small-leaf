@@ -23,14 +23,12 @@ const useForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(value);
     if (!nickname || !email || !phone || !option || !referal) {
       return setHasError(true);
     }
 
-    if (!hasError) {
-      alert(JSON.stringify(value));
-    }
+    setHasError(false)
+    alert(JSON.stringify(value))
   };
 
   return {
