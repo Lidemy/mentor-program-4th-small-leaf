@@ -12,9 +12,8 @@ const useTodos = () => {
 
   const [todos, setTodos] = useState(() => {
     let todoData = window.localStorage.getItem("todos") || "";
-
-    if (todoData && todoData[0] !== undefined) {
-      todoData = JSON.parse(todoData);
+    todoData = JSON.parse(todoData);
+    if (todoData && todoData.length !== 0) {
       id.current = todoData[0].id + 1;
     } else {
       todoData = [];
