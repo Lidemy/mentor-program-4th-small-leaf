@@ -76,16 +76,21 @@ const Filter = styled.div`
   padding: 20px 30px;
   font-size: 15px;
 
-  div,
-  .clear-all {
+  button {
     cursor: pointer;
     border-radius: 6px;
     padding: 4px;
     border: 2px solid transparent;
+    background: none;
   }
 
-  div:hover,
-  .clear-all:hover {
+  button:hover {
+    box-shadow: 0px 0px 13px 3px rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  button:focus {
+    outline: 0;
     box-shadow: 0px 0px 13px 3px rgba(0, 0, 0, 0.1);
     background: rgba(0, 0, 0, 0.2);
   }
@@ -99,18 +104,18 @@ const TodoFilter = ({
 }) => {
   return (
     <Filter>
-      <div className="all" onClick={showAllTodo}>
+      <button className="all" onClick={showAllTodo}>
         全部
-      </div>
-      <div className="unfinished" onClick={showUnfinishedTodo}>
+      </button>
+      <button className="unfinished" onClick={showUnfinishedTodo}>
         未完成
-      </div>
-      <div className="done" onClick={showDoneTodo}>
+      </button>
+      <button className="done" onClick={showDoneTodo}>
         已完成
-      </div>
-      <div className="clear-all" onClick={clearAll}>
+      </button>
+      <button className="clear-all" onClick={clearAll}>
         清空
-      </div>
+      </button>
     </Filter>
   );
 };

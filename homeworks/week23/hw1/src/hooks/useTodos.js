@@ -8,7 +8,7 @@ import {
   toggleTodo,
   clearAllTodo,
   filterTodo,
-  getTodoFromLocalstorage,
+  getTodoFromLocalStorage,
 } from '../redux/actions';
 
 const writeTodosToLocalStorage = (todos) => {
@@ -23,16 +23,15 @@ const useTodos = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    let todoData = window.localStorage.getItem('todos') || '';
-    todoData = JSON.parse(todoData);
+    let todoData = JSON.parse(window.localStorage.getItem('todos'));
     if (todoData && todoData.length !== 0) {
       id.current = todoData[0].id + 1;
-      dispatch(getTodoFromLocalstorage(todoData));
+      dispatch(getTodoFromLocalStorage(todoData));
     } else {
       todoData = [];
     }
     return todoData;
-  }, []);
+  }, [dispatch]);
 
   useEffect(() => {
     writeTodosToLocalStorage(todos);

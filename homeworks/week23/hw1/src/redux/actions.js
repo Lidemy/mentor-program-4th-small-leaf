@@ -50,7 +50,7 @@ function filterTodo(filter) {
   };
 }
 
-function getTodoFromLocalstorage(todos) {
+function getTodoFromLocalStorage(todos) {
   return {
     type: GET_TODOS_FROM_LOCALSTORAGE,
     payload: {
@@ -65,5 +65,5 @@ export {
   toggleTodo,
   clearAllTodo,
   filterTodo,
-  getTodoFromLocalstorage,
+  getTodoFromLocalStorage,
 };
